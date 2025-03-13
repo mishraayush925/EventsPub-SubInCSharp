@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="E:\DotNetLearn\LearnEevntsInCSharpSoln\LearnEevntsInCSharpProj\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="E:\DotNetLearn\LearnEevntsInCSharpSoln\LearnEevntsInCSharpProj\.editorconfig" />
+  </ItemGroup>
+
 </Project>

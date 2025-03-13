@@ -7,9 +7,16 @@ namespace LearnEventsInCSharpProj
         static void Main(string[] args)
         {
             Console.WriteLine("hello from events");
-            VideoEncoder encoder = new VideoEncoder();
-            encoder.EncodeVideo(new Video() { Title = "first video" });
 
+            VideoEncoder encoder = new VideoEncoder();
+
+            EmailServices emailServices = new EmailServices();
+            UploadServices uploadServices = new UploadServices();
+            encoder.VideoEncoded += emailServices.OnVideoEncoded;
+            encoder.VideoEncoded += uploadServices.OnVideoEncoded;
+            encoder.EncodeVideo(new Video() { Title = "youtube shorts" });
+
+            //encoder.VideoEncoded += 
         }
     }
 }
